@@ -345,3 +345,14 @@ register_node("maptools:drowning", {
 	drowning = 1,
 	sunlight_propagates = true,
 })
+
+register_node("maptools:build2unlock", {
+	description = S("Build Prevention"),
+	inventory_image = "default_steel_block.png^default_flint.png",
+	drawtype = "airlike",
+	walkable = false,
+	pointable = false,
+	paramtype = "light",
+	sunlight_propagates = true,
+	buildable_to = true,
+})
