@@ -66,5 +66,6 @@ minetest.register_craftitem("maptools:infinitefuel", {
 minetest.register_craft({
 	type = "fuel",
 	recipe = "maptools:infinitefuel",
-	burntime = 1000000000,
+	burntime = 9999999999,
+	replacements = {{"maptools:infinitefuel", "maptools:infinitefuel"}},
 })
