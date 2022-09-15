@@ -350,7 +350,6 @@ register_node("maptools:build2unlock", {
 	description = S("Build To Unlock"),
 	inventory_image = "default_steel_block.png^key_key.png",
 	drawtype = "airlike",
-	walkable = true,
 	pointable = false,
 	paramtype = "light",
 	sunlight_propagates = true,
