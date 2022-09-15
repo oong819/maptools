@@ -348,7 +348,7 @@ register_node("maptools:drowning", {
 
 register_node("maptools:build2unlock", {
 	description = S("Build To Unlock"),
-	inventory_image = "default_steel_block.png^key_key.png",
+	inventory_image = "default_steel_block.png^keys_key_skeleton.png",
 	drawtype = "airlike",
 	pointable = false,
 	paramtype = "light",
