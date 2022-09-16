@@ -42,6 +42,16 @@ minetest.register_tool("maptools:pick_admin_with_drops", {
 	on_drop = maptools.drop_msg,
 })
 
+minetest.register_tool("maptools:pick_admin_slow", {
+	description = S("Admin Pickaxe"),
+	range = 20,
+	full_punch_interval = 0.5,
+	inventory_image = "maptools_adminpick.png",
+	groups = {not_in_creative_inventory = maptools.creative},
+	tool_capabilities = pick_admin_toolcaps,
+	on_drop = maptools.drop_msg,
+})
+
 minetest.register_on_punchnode(function(pos, node, puncher)
 	if puncher:get_wielded_item():get_name() == "maptools:pick_admin"
 	and minetest.get_node(pos).name ~= "air" then
