@@ -353,7 +353,7 @@ register_node("maptools:build2unlock", {
 	paramtype = "light",
 	sunlight_propagates = true,
 	buildable_to = true,
-	tiles = {"b2u.png^default_stone.png"},
+	tiles = {"default_stone.png^default_glass.png"},
 })
 
 register_node("maptools:flood2unlock", {
@@ -362,5 +362,6 @@ register_node("maptools:flood2unlock", {
 	drawtype = "glasslike_framed",
 	paramtype = "light",
 	sunlight_propagates = true,
-	tiles = {"b2u.png^default_water_source.png"},
+	floodable = true,
+	tiles = {"default_water.png^b2d.png"},
 })
