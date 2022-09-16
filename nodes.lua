@@ -350,9 +350,17 @@ register_node("maptools:build2unlock", {
 	description = S("Build To Unlock"),
 	inventory_image = "default_steel_block.png^keys_key_skeleton.png",
 	drawtype = "glasslike_framed",
-	pointable = false,
 	paramtype = "light",
 	sunlight_propagates = true,
 	buildable_to = true,
-	tiles = {"b2u.png"},
+	tiles = {"b2u.png^default_stone.png"},
+})
+
+register_node("maptools:flood2unlock", {
+	description = S("Flood To Unlock"),
+	inventory_image = "default_steel_block.png^keys_key_skeleton.png",
+	drawtype = "glasslike_framed",
+	paramtype = "light",
+	sunlight_propagates = true,
+	tiles = {"b2u.png^default_water_source.png"},
 })
