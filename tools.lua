@@ -45,7 +45,7 @@ minetest.register_tool("maptools:pick_admin_with_drops", {
 minetest.register_tool("maptools:pick_admin_slow", {
 	description = S("Slow Admin Pickaxe"),
 	range = 20,
-	full_punch_interval = 0.5,
+	full_punch_interval = 0.8,
 	inventory_image = "adpi.png",
 	groups = {not_in_creative_inventory = maptools.creative},
 	tool_capabilities = pick_admin_toolcaps,
