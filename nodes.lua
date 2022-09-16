@@ -349,19 +349,17 @@ register_node("maptools:drowning", {
 register_node("maptools:build2unlock", {
 	description = S("Build To Unlock"),
 	inventory_image = "default_steel_block.png^keys_key_skeleton.png",
-	drawtype = "glasslike_framed",
 	paramtype = "light",
 	sunlight_propagates = true,
 	buildable_to = true,
-	tiles = {"default_stone.png^default_glass.png"},
+	tiles = {"default_stone.png^loc.png"},
 })
 
 register_node("maptools:flood2unlock", {
 	description = S("Flood To Unlock"),
 	inventory_image = "default_steel_block.png^keys_key_skeleton.png",
-	drawtype = "glasslike_framed",
 	paramtype = "light",
 	sunlight_propagates = true,
 	floodable = true,
-	tiles = {"default_water.png^b2d.png"},
+	tiles = {"default_water.png^loc.png"},
 })
