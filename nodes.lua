@@ -5,10 +5,10 @@ Copyright © 2012-2020 Hugo Locurcio and contributors.
 Licensed under the zlib license. See LICENSE.md for more information.
 --]]
 
-local S = maptools.S
-local register_node = maptools.register_node
+local S = mpts.S
+local register_node = mpts.register_node
 
-maptools.creative = maptools.config["hide_from_creative_inventory"]
+maptools.creative = mpts.config["hide_from_creative_inventory"]
 
 -- Redefine cloud so that the admin pickaxe can mine it
 register_node(":default:cloud", {
@@ -19,21 +19,21 @@ register_node(":default:cloud", {
 
 -- Nodes
 
-register_node("maptools:black", {
+register_node("mpts:black", {
 	description = S("Black"),
 	tiles = {"black.png"},
 	post_effect_color = {a=255, r=0, g=0, b=0},
 	sounds = default.node_sound_stone_defaults(),
 })
 
-register_node("maptools:white", {
+register_node("mpts:white", {
 	description = S("White"),
 	tiles = {"white.png"},
 	post_effect_color = {a=255, r=128, g=128, b=128},
 	sounds = default.node_sound_stone_defaults(),
 })
 
-register_node("maptools:playerclip", {
+register_node("mpts:playerclip", {
 	description = S("Player Clip"),
 	inventory_image = "default_steel_block.png^dye_green.png",
 	drawtype = "airlike",
@@ -42,7 +42,7 @@ register_node("maptools:playerclip", {
 	sunlight_propagates = true,
 })
 
-register_node("maptools:fake_walkable", {
+register_node("mpts:fake_walkable", {
 	description = S("Player Clip"),
 	inventory_image = "default_steel_block.png^dye_green.png",
 	drawtype = "airlike",
@@ -57,7 +57,7 @@ register_node("maptools:fake_walkable", {
 	},
 })
 
-register_node("maptools:fullclip", {
+register_node("mpts:fullclip", {
 	description = S("Full Clip"),
 	inventory_image = "default_steel_block.png^dye_blue.png",
 	drawtype = "airlike",
@@ -65,7 +65,7 @@ register_node("maptools:fullclip", {
 	sunlight_propagates = true,
 })
 
-register_node("maptools:fake_walkable_pointable", {
+register_node("mpts:fake_walkable_pointable", {
 	description = S("Player Clip"),
 	inventory_image = "default_steel_block.png^dye_green.png",
 	drawtype = "airlike",
@@ -79,7 +79,7 @@ register_node("maptools:fake_walkable_pointable", {
 	},
 })
 
-register_node("maptools:ignore_like", {
+register_node("mpts:ignore_like", {
 	description = S("Ignore-like"),
 	inventory_image = "default_steel_block.png^dye_pink.png",
 	tiles = {"invisible.png"},
@@ -87,7 +87,7 @@ register_node("maptools:ignore_like", {
 	sunlight_propagates = true,
 })
 
-register_node("maptools:ignore_like_no_clip", {
+register_node("mpts:ignore_like_no_clip", {
 	description = S("Ignore-like (no clip)"),
 	inventory_image = "default_steel_block.png^dye_violet.png",
 	tiles = {"invisible.png"},
@@ -97,7 +97,7 @@ register_node("maptools:ignore_like_no_clip", {
 })
 
 
-register_node("maptools:ignore_like_no_point", {
+register_node("mpts:ignore_like_no_point", {
 	description = S("Ignore-like (no point)"),
 	inventory_image = "default_steel_block.png^dye_violet.png",
 	tiles = {"invisible.png"},
@@ -106,7 +106,7 @@ register_node("maptools:ignore_like_no_point", {
 	sunlight_propagates = true,
 })
 
-register_node("maptools:ignore_like_no_clip_no_point", {
+register_node("mpts:ignore_like_no_clip_no_point", {
 	description = S("Ignore-like (no clip, no point)"),
 	inventory_image = "default_steel_block.png^dye_pink.png",
 	tiles = {"invisible.png"},
@@ -116,7 +116,7 @@ register_node("maptools:ignore_like_no_clip_no_point", {
 	sunlight_propagates = true,
 })
 
-register_node("maptools:fullclip_face", {
+register_node("mpts:fullclip_face", {
 	description = S("Full Clip Face"),
 	inventory_image = "default_steel_block.png^dye_white.png",
 	drawtype = "nodebox",
@@ -133,7 +133,7 @@ register_node("maptools:fullclip_face", {
 	},
 })
 
-register_node("maptools:playerclip_bottom", {
+register_node("mpts:playerclip_bottom", {
 	description = S("Player Clip Bottom Face"),
 	inventory_image = "default_steel_block.png^dye_orange.png",
 	drawtype = "nodebox",
@@ -150,7 +150,7 @@ register_node("maptools:playerclip_bottom", {
 	},
 })
 
-register_node("maptools:playerclip_top", {
+register_node("mpts:playerclip_top", {
 	description = S("Player Clip Top Face"),
 	inventory_image = "default_steel_block.png^dye_yellow.png",
 	drawtype = "nodebox",
@@ -168,7 +168,7 @@ register_node("maptools:playerclip_top", {
 })
 
 for pusher_num=1,10,1 do
-	register_node("maptools:pusher_" .. pusher_num, {
+	register_node("mpts:pusher_" .. pusher_num, {
 		description = S("Pusher (%s)"):format(pusher_num),
 				inventory_image = "default_steel_block.png^default_apple.png",
 		drawtype = "nodebox",
@@ -187,7 +187,7 @@ for pusher_num=1,10,1 do
 	})
 end
 
-register_node("maptools:lightbulb", {
+register_node("mpts:lightbulb", {
 	description = S("Light Bulb"),
 	inventory_image = "default_steel_block.png^default_mese_crystal_fragment.png",
 	drawtype = "airlike",
@@ -198,7 +198,7 @@ register_node("maptools:lightbulb", {
 	sunlight_propagates = true,
 })
 
-register_node("maptools:nobuild", {
+register_node("mpts:nobuild", {
 	description = S("Build Prevention"),
 	inventory_image = "default_steel_block.png^default_flint.png",
 	drawtype = "airlike",
@@ -208,7 +208,7 @@ register_node("maptools:nobuild", {
 	sunlight_propagates = true,
 })
 
-register_node("maptools:nointeract", {
+register_node("mpts:nointeract", {
 	description = S("Interact Prevention"),
 	inventory_image = "default_steel_block.png^default_bush_stem.png",
 	drawtype = "airlike",
@@ -217,7 +217,7 @@ register_node("maptools:nointeract", {
 	sunlight_propagates = true,
 })
 
-register_node("maptools:climb", {
+register_node("mpts:climb", {
 	description = S("Climb Block"),
 	inventory_image = "default_steel_block.png^default_ladder_wood.png",
 	drawtype = "airlike",
@@ -229,7 +229,7 @@ register_node("maptools:climb", {
 })
 
 for damage_num=1,5,1 do
-register_node("maptools:damage_" .. damage_num, {
+register_node("mpts:damage_" .. damage_num, {
 	description = S("Damaging Block (%s)"):format(damage_num),
 	inventory_image = "default_steel_block.png^farming_cotton_" .. damage_num .. ".png",
 	drawtype = "airlike",
@@ -241,7 +241,7 @@ register_node("maptools:damage_" .. damage_num, {
 })
 end
 
-register_node("maptools:kill", {
+register_node("mpts:kill", {
 	description = S("Kill Block"),
 	inventory_image = "default_steel_block.png^dye_black.png",
 	drawtype = "airlike",
@@ -252,7 +252,7 @@ register_node("maptools:kill", {
 	sunlight_propagates = true,
 })
 
-register_node("maptools:smoke", {
+register_node("mpts:smoke", {
 	description = S("Smoke Block"),
 	tiles = {"maptools_smoke.png"},
 	drawtype = "allfaces_optional",
@@ -261,7 +261,7 @@ register_node("maptools:smoke", {
 	post_effect_color = {a=192, r=96, g=96, b=96},
 })
 
-register_node("maptools:ladder", {
+register_node("mpts:ladder", {
 	description = S("Fake Ladder"),
 	drawtype = "signlike",
 	tiles = {"default_ladder_wood.png"},
@@ -277,7 +277,7 @@ register_node("maptools:ladder", {
 	sounds = default.node_sound_wood_defaults(),
 })
 
-register_node("maptools:permanent_fire", {
+register_node("mpts:permanent_fire", {
 	description = S("Permanent Fire"),
 	drawtype = "plantlike",
 	paramtype = "light",
@@ -292,7 +292,7 @@ register_node("maptools:permanent_fire", {
 	damage_per_second = 4,
 })
 
-register_node("maptools:fake_fire", {
+register_node("mpts:fake_fire", {
 	description = S("Fake Fire"),
 	drawtype = "plantlike",
 	paramtype = "light",
@@ -306,7 +306,7 @@ register_node("maptools:fake_fire", {
 	walkable = false,
 })
 
-register_node("maptools:igniter", {
+register_node("mpts:igniter", {
 	drawtype = "airlike",
 	description = S("Igniter"),
 	paramtype = "light",
@@ -317,7 +317,7 @@ register_node("maptools:igniter", {
 	walkable = false,
 })
 
-register_node("maptools:superapple", {
+register_node("mpts:superapple", {
 	description = S("Super Apple"),
 	drawtype = "plantlike",
 	visual_scale = 1.0,
@@ -335,7 +335,7 @@ register_node("maptools:superapple", {
 	sounds = default.node_sound_defaults(),
 })
 
-register_node("maptools:drowning", {
+register_node("mpts:drowning", {
 	description = S("Drownable Air"),
 	inventory_image = "default_steel_block.png^dye_black.png",
 	drawtype = "airlike",
@@ -346,7 +346,7 @@ register_node("maptools:drowning", {
 	sunlight_propagates = true,
 })
 
-register_node("maptools:build2unlock", {
+register_node("mpts:build2unlock", {
 	description = S("Build To Unlock"),
 	inventory_image = "default_steel_block.png^keys_key_skeleton.png",
 	paramtype = "light",
@@ -355,7 +355,7 @@ register_node("maptools:build2unlock", {
 	tiles = {"default_stone.png^loc.png"},
 })
 
-register_node("maptools:flood2unlock", {
+register_node("mpts:flood2unlock", {
 	description = S("Flood To Unlock"),
 	inventory_image = "default_steel_block.png^keys_key_skeleton.png",
 	paramtype = "light",
